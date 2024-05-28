@@ -1,0 +1,6 @@
+cd ./kube-device-plugin-example/gopath/src/extend-k8s.io/k8s-device-plugin-example 
+
+export DOCKER_REPOSITORY=lgecloudroboticstask
+
+docker build -t $DOCKER_REPOSITORY/k8s-device-plugin-example:v1 .
+docker push $DOCKER_REPOSITORY/k8s-device-plugin-example:v1
