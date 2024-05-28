@@ -3,6 +3,6 @@ ADD . /go/src/github.com/extend-k8s.io/k8s-device-plugin-example
 WORKDIR /go/src/github.com/extend-k8s.io/k8s-device-plugin-example/cmd
 RUN go build -v
 
-# FROM alpine:latest
-# COPY --from=builder /go/src/github.com/extend-k8s.io/k8s-device-plugin-example/cmd/cmd /usr/local/bin/k8s-device-plugin-example
-# CMD ["k8s-device-plugin-example"]
+FROM alpine:latest
+COPY --from=builder /go/src/github.com/extend-k8s.io/k8s-device-plugin-example/cmd/cmd /usr/local/bin/k8s-device-plugin-example
+CMD ["k8s-device-plugin-example"]
